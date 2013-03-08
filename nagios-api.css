@@ -1,0 +1,48 @@
+div#code-ci {
+  float: left;
+  width: 50%;
+}
+
+div#nagios-api { 
+  float: left;
+  width: 50%;
+  height: 500px;
+}
+
+table.nagios-api {
+  width: 100%;
+  height: 100%;
+}
+
+.host-entry {
+  border: solid red 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 48.2%;
+}
+
+.left  { float: left; }
+.right { float: right; }
+
+.status-critial { 
+  background-color: #FF5050;
+  border-color:  #CC0000;
+}
+
+.status-warning { 
+  background-color: #FFFF99;
+  border-color:  #B89300;
+}
+
+.status-ok { 
+  background-color: #4D944D;
+  border-color:  #1F3B1F;
+}
+
+.status-na { 
+  background-color: #DDDDDD;
+  border-color:  #333333;
+}
