@@ -98,7 +98,7 @@ function display_nagios_status(data, t, j) {
   // Good services
   if (services_by_state["good"] !== undefined) {
     html += "<div class='state-good' style='height: " + (has_bad_state ? "50%" : "100%") + "'>";
-    html += generate_html_from_services(services_by_state["good"]);
+    html += generate_html_from_services(services_by_state["good"], false);
     html += "</div>"
   }
   $('#nagios-api').html(html);
