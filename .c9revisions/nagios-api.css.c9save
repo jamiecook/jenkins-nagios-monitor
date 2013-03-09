@@ -13,3 +13,4 @@
 {"ts":1362810647601,"patch":[[{"diffs":[[0,"dle;\n}\n\n"],[1,".entry-container { \n  overf\n}\n\n"],[0,"span { \n"]],"start1":424,"start2":424,"length1":16,"length2":47}]],"length":896,"saved":false}
 {"ts":1362810650888,"patch":[[{"diffs":[[0,"\n  overf"],[1,"low: hidden;"],[0,"\n}\n\nspan"]],"start1":451,"start2":451,"length1":16,"length2":28}]],"length":908,"saved":false}
 {"ts":1362810657630,"patch":[[{"diffs":[[0,"hidden;\n"],[1,"  width: 50%;\n"],[0,"}\n\nspan "]],"start1":464,"start2":464,"length1":16,"length2":30}]],"length":922,"saved":false}
+{"ts":1362810726192,"patch":[[{"diffs":[[0,"px; */\n "],[1," /*"],[0," width: "]],"start1":380,"start2":380,"length1":16,"length2":19},{"diffs":[[0,": 48.2%;"],[1," */"],[0,"\n  verti"]],"start1":397,"start2":397,"length1":16,"length2":19}]],"length":928,"saved":false}
