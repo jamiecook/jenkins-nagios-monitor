@@ -68,3 +68,5 @@
 {"ts":1362806566638,"patch":[[{"diffs":[[0,"d) \n"],[-1,"    console.log('hi')\n"],[0,"    "]],"start1":2597,"start2":2597,"length1":30,"length2":8}]],"length":3250,"saved":false}
 {"ts":1362806582039,"patch":[[{"diffs":[[0,"/div>\";\n  }\n"],[1,"  \n  // Good services\n"],[0,"  if (servic"]],"start1":2752,"start2":2752,"length1":24,"length2":46}]],"length":3272,"saved":false}
 {"ts":1362806588998,"patch":[[{"diffs":[[0,"es_by_state["],[-1,"key"],[1,"0"],[0,"]);\n    html"]],"start1":2916,"start2":2916,"length1":27,"length2":25}]],"length":3270,"saved":false}
+{"ts":1362806644648,"patch":[[{"diffs":[[0,"fined) \n"],[1,"    console.log('hi ' + key)\n"],[0,"    bad_"]],"start1":2593,"start2":2593,"length1":16,"length2":45}]],"length":3299,"saved":false}
+{"ts":1362806666096,"patch":[[{"diffs":[[0,"[key]);\n"],[1,"    console.log(services_by_state[key].length)\n"],[0,"  }\n  if"]],"start1":2691,"start2":2691,"length1":16,"length2":63}]],"length":3346,"saved":false}
