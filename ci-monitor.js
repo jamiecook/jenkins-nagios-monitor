@@ -86,7 +86,8 @@ function display_nagios_status(data, t, j) {
   var bad_html = ""
   for (var key in [3,2,1]) {
     if (services_by_state[key] !== undefined) 
-      bad_html += generate_html_from_services(services_by_state[key]);
+    console.log('hi')
+    bad_html += generate_html_from_services(services_by_state[key]);
   }
   if (bad_html !== "") {
     html += "<div class='state-bad'>" + bad_html + "</div>";
