@@ -36,7 +36,7 @@ function getBody(content)
     return content.slice(x + 1, y);
 }
 
-function convert_service_entry_to_tr(host, service, data, left_or_right) {
+function convert_service_entry_to_tr(data, left_or_right) {
   console.log(JSON.stringify(data));
   if (data.notifications_enabled == "0") {
     return ""
@@ -45,7 +45,7 @@ function convert_service_entry_to_tr(host, service, data, left_or_right) {
   var host_and_status = data.plugin_output.split(' - ')[0]
   var status          = "status-" + convert_integer_status_to_string(data.current_state)
   return "<div class='host-entry " + status + " " + left_or_right + "'>" +
-    host + ' ' + host_and_status + 
+    data['host'] + ' ' + host_and_status + 
   "</div>"
 }
 
@@ -57,7 +57,7 @@ function generate_html_from_services(services) {
   var left_or_right = "left";
   var generated_html = "";
   for (var service in services) { 
-    generated_html += convert_service_entry_to_tr(service.host, service.service, service, left_or_right)
+    generated_html += convert_service_entry_to_tr(service, left_or_right)
     left_or_right = toggle_left_right(left_or_right);
   }
   return generated_html;
