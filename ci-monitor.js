@@ -47,7 +47,7 @@ function convert_service_entry_to_tr(data, left_or_right, height) {
   var float_str       = height === "" ? left_or_right : ""
   var class_str       = "class='host-entry " + status + " " + float_str + "' "
   return "<div " + class_str + height + ">" +
-    data.current_state + " " + data['host'] + ' ' + host_and_status + 
+    data['host'] + ' ' + host_and_status + 
   "</div>"
 }
 
