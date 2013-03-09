@@ -76,7 +76,7 @@ function display_nagios_status(data, t, j) {
         service_entries.push(service);
       }
   }
-  
+  console.log(JSON.stringify(service_entries))
   $('#nagios-api').html(generate_html_from_services(service_entries));
   
   var services_by_state = _.groupBy(service_entries, function (e) { return parseInt(e['current_state'], 10); });
