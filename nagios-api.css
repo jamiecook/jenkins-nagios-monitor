@@ -22,9 +22,9 @@ table.nagios-api {
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  /* padding: 5px; */
+  padding: 5px;
   /* width: 48.2%; */
-  width: 95%; /* allow some space for borders */
+  width: 47.5%; /* allow some space for borders */
   vertical-align: middle;
 }
 
