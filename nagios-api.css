@@ -27,6 +27,11 @@ table.nagios-api {
   vertical-align: middle;
 }
 
+.entry-container { 
+  overflow: hidden;
+  width: 50%;
+}
+
 span { 
   display: inline-block;
   vertical-align: middle;
