@@ -70,22 +70,19 @@ function display_nagios_status(data, t, j) {
   var service_entries = [];
   for (var host in data.content) {
       for (var service_name in data.content[host].services) {
-        //var service_status = data.content[host].services[service].current_state
         var service = data.content[host].services[service_name]
         service['host'] = host;
         service['service'] = service_name;
-        console.log(JSON.stringify(host));
-        console.log(JSON.stringify(service_name));
-        console.log(JSON.stringify(service));
         service_entries.push(service);
       }
   }
+  
+  $('#nagios-api').html(generate_html_from_services(service_entries));
   
   var services_by_state = _.groupBy(service_entries, function (e) { return parseInt(e['current_state'], 10); });
   // console.log(JSON.stringify(services_by_state));
   console.log(Object.keys(services_by_state));
   
-  $('#nagios-api').html(generate_html_from_services(service_entries));
 }
 
 function createSearchBox(url) { console.log("doing nothing with url: " + url); }
