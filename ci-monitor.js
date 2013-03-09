@@ -57,9 +57,9 @@ function generate_html_from_services(services) {
   console.log(JSON.stringify(services));
   var left_or_right = "left";
   var generated_html = "";
-  console.log(JSON.stringify(services));
   for (var service in services) { 
-    generated_html += convert_service_entry_to_tr(service, left_or_right)
+    console.log(JSON.stringify(service));
+      generated_html += convert_service_entry_to_tr(service, left_or_right)
     left_or_right = toggle_left_right(left_or_right);
   }
   return generated_html;
