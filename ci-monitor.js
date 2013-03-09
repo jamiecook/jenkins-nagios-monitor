@@ -86,7 +86,7 @@ function display_nagios_status(data, t, j) {
     console.log(key);
     html += "<div class='state-" + key + "'>";
     html += generate_html_from_services(services_by_state[key]);
-    html += </div>
+    html += "</div>"
   }
   $('#nagios-api').html(html);
   
