@@ -26,6 +26,7 @@ table.nagios-api {
   /* width: 48.2%; */
   width: 48%; /* allow some space for borders */
   vertical-align: middle;
+  text-align: center;
 }
 
 .entry-container { 
