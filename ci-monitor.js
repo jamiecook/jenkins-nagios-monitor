@@ -80,7 +80,14 @@ function display_nagios_status(data, t, j) {
   
   $('#nagios-api').html(generate_html_from_services(service_entries));
   
+  var html = "";
   var services_by_state = _.groupBy(service_entries, function (e) { return parseInt(e['current_state'], 10); });
+  for (var key in Object.keys(services_by_state)) { 
+    console.log(key);
+    html += generate_html_from_services(services_by_state[key]);
+  }
+  $('#nagios-api').html(html);
+  
   // console.log(JSON.stringify(services_by_state));
   console.log(Object.keys(services_by_state));
   
