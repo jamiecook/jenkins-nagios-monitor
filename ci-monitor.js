@@ -82,13 +82,13 @@ function display_nagios_status(data, t, j) {
   
   var html = "";
   var services_by_state = _.groupBy(service_entries, function (e) { return parseInt(e['current_state'], 10); });
+  var bad_state = false;
   // for (var key in Object.keys(services_by_state)) {
   var bad_html = ""
-  for (var key = 1; key <= 3; ++key) {
+  for (var key = 5; key > 0; --key) {
     if (services_by_state[key] !== undefined) 
-    
     bad_html += generate_html_from_services(services_by_state[key]);
-    // console.log(services_by_state[key].length)
+    bad_state = true;
   }
   if (bad_html !== "") {
     html += "<div class='state-bad'>" + bad_html + "</div>";
@@ -96,7 +96,7 @@ function display_nagios_status(data, t, j) {
   
   // Good services
   if (services_by_state[0] !== undefined) {
-    html += "<div class='state-good'>";
+    html += "<div class='state-good' style='height: " + bad_state ? "100%" : "50%" + "'>";
     html += generate_html_from_services(services_by_state[0]);
     html += "</div>"
   }
