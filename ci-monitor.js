@@ -43,9 +43,9 @@ function convert_service_entry_to_tr(data, left_or_right) {
   } 
   
   var host_and_status = data.plugin_output.split(' - ')[0]
-  var status          = data.current_state + " status-" + convert_integer_status_to_string(data.current_state)
+  var status          = "status-" + convert_integer_status_to_string(data.current_state)
   return "<div class='host-entry " + status + " " + left_or_right + "'>" +
-    data['host'] + ' ' + host_and_status + 
+    data.current_state + " " + data['host'] + ' ' + host_and_status + 
   "</div>"
 }
 
