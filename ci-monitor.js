@@ -73,7 +73,7 @@ function display_nagios_status(data, t, j) {
   
   var services_by_state = _.groupBy(service_entries, function (e) { return parseInt(e['current_state'], 10) })
   console.log(JSON.stringify(services_by_state))
-  console.log(JSON.stringify(services_by_state.keys))
+  console.log(JSON.stringify(Object.keys(services_by_state)))
   
   $('#nagios-api').html(generated_html);
 }
