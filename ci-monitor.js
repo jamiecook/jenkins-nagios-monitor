@@ -57,6 +57,7 @@ function display_nagios_status(data, t, j) {
   
   var generated_html = "";
   var left_or_right = "left";
+  var service_entries = [];
   for (var host in data.content) {
       // console.log(host + ' ' + data.content[host].plugin_output);
       // generated_html += convert_service_entry_to_tr(host, 'root', data.content[host])
@@ -66,8 +67,12 @@ function display_nagios_status(data, t, j) {
         generated_html += convert_service_entry_to_tr(host, service, data.content[host].services[service], left_or_right)
         left_or_right = toggle_left_right(left_or_right);
         // console.log("service: " + service + " on " + host + " has state: " + service_status)
+        service_entries.push(data.content[host].services[service])
       }
   }
+  
+  var services_by_state = _.groupBy(service_entries, 'current_state')
+  console.log(JSON.stringify(services_by_state))
   
   $('#nagios-api').html(generated_html);
 }
