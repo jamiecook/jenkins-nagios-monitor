@@ -26,6 +26,12 @@ table.nagios-api {
   width: 48.2%;
 }
 
+span { 
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal; 
+}
+
 .left  { float: left; }
 .right { float: right; }
 
