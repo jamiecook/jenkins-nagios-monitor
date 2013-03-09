@@ -82,9 +82,11 @@ function display_nagios_status(data, t, j) {
   
   var html = "";
   var services_by_state = _.groupBy(service_entries, function (e) { return parseInt(e['current_state'], 10); });
-  for (var key in Object.keys(services_by_state)) { 
+  for (var key in Object.keys(services_by_state)) {
     console.log(key);
+    html += "<div class='state-" + key + "'>";
     html += generate_html_from_services(services_by_state[key]);
+    html += </div>
   }
   $('#nagios-api').html(html);
   
