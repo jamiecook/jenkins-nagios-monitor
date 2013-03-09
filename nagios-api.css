@@ -15,19 +15,19 @@ table.nagios-api {
 }
 
 .host-entry {
-  border: solid red 3px;
+  border: solid magenta 3px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  padding: 5px;
+  /* padding: 5px; */
   width: 48.2%;
 }
 
 .left  { float: left; }
 .right { float: right; }
 
-.status-critial { 
+.status-critical { 
   background-color: #FF5050;
   border-color:  #CC0000;
 }
