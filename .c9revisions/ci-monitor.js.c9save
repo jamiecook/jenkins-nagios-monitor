@@ -70,3 +70,5 @@
 {"ts":1362806588998,"patch":[[{"diffs":[[0,"es_by_state["],[-1,"key"],[1,"0"],[0,"]);\n    html"]],"start1":2916,"start2":2916,"length1":27,"length2":25}]],"length":3270,"saved":false}
 {"ts":1362806644648,"patch":[[{"diffs":[[0,"fined) \n"],[1,"    console.log('hi ' + key)\n"],[0,"    bad_"]],"start1":2593,"start2":2593,"length1":16,"length2":45}]],"length":3299,"saved":false}
 {"ts":1362806666096,"patch":[[{"diffs":[[0,"[key]);\n"],[1,"    console.log(services_by_state[key].length)\n"],[0,"  }\n  if"]],"start1":2691,"start2":2691,"length1":16,"length2":63}]],"length":3346,"saved":false}
+{"ts":1362806715624,"patch":[[{"diffs":[[0,"key "],[-1,"in [3,2,1]"],[1,"= 1; key <= 3; ++key"],[0,") {\n"]],"start1":2536,"start2":2536,"length1":18,"length2":28}]],"length":3356,"saved":false}
+{"ts":1362806721019,"patch":[[{"diffs":[[0,"    "],[-1,"console.log('hi ' + key)"],[0,"\n   "]],"start1":2611,"start2":2611,"length1":32,"length2":8},{"diffs":[[0,"y]);\n   "],[1," //"],[0," console"]],"start1":2680,"start2":2680,"length1":16,"length2":19}]],"length":3335,"saved":false}

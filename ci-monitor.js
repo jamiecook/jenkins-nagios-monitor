@@ -84,11 +84,11 @@ function display_nagios_status(data, t, j) {
   var services_by_state = _.groupBy(service_entries, function (e) { return parseInt(e['current_state'], 10); });
   // for (var key in Object.keys(services_by_state)) {
   var bad_html = ""
-  for (var key in [3,2,1]) {
+  for (var key = 1; key <= 3; ++key) {
     if (services_by_state[key] !== undefined) 
-    console.log('hi ' + key)
+    
     bad_html += generate_html_from_services(services_by_state[key]);
-    console.log(services_by_state[key].length)
+    // console.log(services_by_state[key].length)
   }
   if (bad_html !== "") {
     html += "<div class='state-bad'>" + bad_html + "</div>";
