@@ -68,13 +68,12 @@ function display_nagios_status(data, t, j) {
   
   var service_entries = [];
   for (var host in data.content) {
-      for (var service in data.content[host].services) {
+      for (var service_name in data.content[host].services) {
         //var service_status = data.content[host].services[service].current_state
+        var service = data.content[host].services[service_name]
         service['host'] = host;
         service['service'] = service;
-        // console.log("service: " + service + " on " + host + " has state: " + service_status)
-        console.log(JSON.stringify(data.content[host].services[service]));
-        service_entries.push(data.content[host].services[service])
+        service_entries.push(service);
       }
   }
   
