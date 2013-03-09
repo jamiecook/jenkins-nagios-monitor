@@ -74,6 +74,7 @@ function display_nagios_status(data, t, j) {
         var service = data.content[host].services[service_name]
         service['host'] = host;
         service['service'] = service;
+        console.log(JSON.stringify(service));
         service_entries.push(service);
       }
   }
