@@ -48,7 +48,7 @@ function convert_service_entry_to_tr(data, left_or_right, height) {
   var class_str       = "class='host-entry " + status + " " + float_str + "' "
   return "<div><div " + class_str + height + ">" +
     data.current_state + " " + data['host'] + ' ' + host_and_status + 
-  "</div><div>"
+  "</div></div>"
 }
 
 function toggle_left_right(left_or_right) {
