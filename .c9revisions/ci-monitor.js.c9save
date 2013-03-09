@@ -86,3 +86,4 @@
 {"ts":1362808679651,"patch":[[{"diffs":[[0,"gth) + \""],[1,"%"],[0,"' \" : \"\""]],"start1":1739,"start2":1739,"length1":16,"length2":17}]],"length":3577,"saved":false}
 {"ts":1362808693501,"patch":[[{"diffs":[[0,"ght + \"'"],[1," "],[0,"\"\n  retu"]],"start1":1266,"start2":1266,"length1":16,"length2":17}]],"length":3578,"saved":false}
 {"ts":1362808706894,"patch":[[{"diffs":[[0,"eight + "],[1,"\""],[0,">\" +\n   "]],"start1":1309,"start2":1309,"length1":16,"length2":17}]],"length":3579,"saved":false}
+{"ts":1362808813018,"patch":[[{"diffs":[[0,"_state)\n"],[1,"  var float_str       = height === \"\" ? left_or_right : \"\"\n"],[0,"  var cl"]],"start1":1186,"start2":1186,"length1":16,"length2":75},{"diffs":[[0,"+ \" \" + "],[-1,"left_or_right"],[1,"float_str"],[0," + \"' \"\n"]],"start1":1307,"start2":1307,"length1":29,"length2":25}]],"length":3634,"saved":false}
