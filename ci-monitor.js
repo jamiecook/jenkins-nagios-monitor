@@ -72,8 +72,8 @@ function display_nagios_status(data, t, j) {
       for (var service_name in data.content[host].services) {
         //var service_status = data.content[host].services[service].current_state
         var service = data.content[host].services[service_name]
-        service['host'] = host;
-        service['service'] = service;
+        //service['host'] = host;
+        //service['service'] = service;
         console.log(JSON.stringify(service));
         service_entries.push(service);
       }

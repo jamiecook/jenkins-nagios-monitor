@@ -28,3 +28,4 @@
 {"ts":1362804492145,"patch":[[{"diffs":[[0,"l = \"\";\n"],[1,"  console.log(JSON.stringify(services))\n"],[0,"  for (v"]],"start1":1514,"start2":1514,"length1":16,"length2":56}]],"length":2691,"saved":false}
 {"ts":1362804493940,"patch":[[{"diffs":[[0,"rvices))"],[1,";"],[0,"\n  for ("]],"start1":1553,"start2":1553,"length1":16,"length2":17}]],"length":2692,"saved":false}
 {"ts":1362804543386,"patch":[[{"diffs":[[0,"ervice;\n"],[1,"        console.log(JSON.stringify(service));\n"],[0,"        "]],"start1":2168,"start2":2168,"length1":16,"length2":62}]],"length":2738,"saved":false}
+{"ts":1362804587303,"patch":[[{"diffs":[[0,"e_name]\n        "],[1,"//"],[0,"service['host'] "]],"start1":2098,"start2":2098,"length1":32,"length2":34},{"diffs":[[0,"st;\n        "],[1,"//"],[0,"service['ser"]],"start1":2136,"start2":2136,"length1":24,"length2":26}]],"length":2742,"saved":false}
