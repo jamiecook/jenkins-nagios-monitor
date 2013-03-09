@@ -37,6 +37,7 @@ function getBody(content)
 }
 
 function convert_service_entry_to_tr(host, service, data, left_or_right) {
+  console.log(JSON.stringify(data));
   if (data.notifications_enabled == "0") {
     return ""
   } 
