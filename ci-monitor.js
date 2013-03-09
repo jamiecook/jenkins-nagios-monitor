@@ -64,6 +64,7 @@ function generate_html_from_services(services, fill_height) {
     // console.log(JSON.stringify(services[i]));
     generated_html += convert_service_entry_to_tr(services[i], left_or_right, height)
     left_or_right = toggle_left_right(left_or_right);
+    console.log(left_or_right)
   }
   return generated_html;
 }

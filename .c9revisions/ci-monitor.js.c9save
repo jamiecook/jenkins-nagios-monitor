@@ -91,3 +91,4 @@
 {"ts":1362808887098,"patch":[[{"diffs":[[0," width: "],[-1,"100"],[1,"98"],[0,"%' \" : \""]],"start1":1806,"start2":1806,"length1":19,"length2":18}]],"length":3646,"saved":false}
 {"ts":1362809006581,"patch":[[{"diffs":[[0,"t: \" + ("],[-1,"100"],[1,"98"],[0,".0 / ser"]],"start1":1768,"start2":1768,"length1":19,"length2":18}]],"length":3645,"saved":false}
 {"ts":1362809105346,"patch":[[{"diffs":[[0,": \" + (9"],[-1,"8"],[1,"4"],[0,".0 / ser"]],"start1":1769,"start2":1769,"length1":17,"length2":17}]],"length":3645,"saved":false}
+{"ts":1362809233632,"patch":[[{"diffs":[[0,"right);\n"],[1,"    console.log(left_or_right)\n"],[0,"  }\n  re"]],"start1":2048,"start2":2048,"length1":16,"length2":47}]],"length":3676,"saved":false}
