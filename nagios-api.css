@@ -14,9 +14,8 @@ table.nagios-api {
   height: 100%;
 }
 
-.state-good { 
-  overflow: hidden;
-}
+.state-good { overflow: hidden; }
+.state-bad  { overflow: hidden; }
 
 .host-entry {
   border: solid magenta 3px;
