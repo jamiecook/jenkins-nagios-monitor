@@ -54,12 +54,12 @@ function toggle_left_right(left_or_right) {
 }
 
 function generate_html_from_services(services) {
-  console.log(JSON.stringify(services));
+  // console.log(JSON.stringify(services));
   var left_or_right = "left";
   var generated_html = "";
-  for (var service in services) { 
-    console.log(JSON.stringify(service));
-      generated_html += convert_service_entry_to_tr(service, left_or_right)
+  for (var i=0; i<services.length; ++i) {
+    // console.log(JSON.stringify(services[i]));
+    generated_html += convert_service_entry_to_tr(services[i], left_or_right)
     left_or_right = toggle_left_right(left_or_right);
   }
   return generated_html;
