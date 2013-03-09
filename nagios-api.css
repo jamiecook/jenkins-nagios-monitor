@@ -24,7 +24,7 @@ table.nagios-api {
   border-radius: 5px;
   /* padding: 5px; */
   /* width: 48.2%; */
-  width: 100%;
+  width: 95%; /* allow some space for borders */
   vertical-align: middle;
 }
 
