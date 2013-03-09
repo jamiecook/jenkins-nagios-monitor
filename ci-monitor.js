@@ -37,7 +37,7 @@ function getBody(content)
 }
 
 function convert_service_entry_to_tr(data, left_or_right) {
-  console.log(JSON.stringify(data));
+  // console.log(JSON.stringify(data));
   if (data.notifications_enabled == "0") {
     return ""
   } 
@@ -54,6 +54,7 @@ function toggle_left_right(left_or_right) {
 }
 
 function generate_html_from_services(services) {
+  console.log(JSON.stringify(services));
   var left_or_right = "left";
   var generated_html = "";
   console.log(JSON.stringify(services));
@@ -76,7 +77,7 @@ function display_nagios_status(data, t, j) {
         service_entries.push(service);
       }
   }
-  console.log(JSON.stringify(service_entries))
+  
   $('#nagios-api').html(generate_html_from_services(service_entries));
   
   var services_by_state = _.groupBy(service_entries, function (e) { return parseInt(e['current_state'], 10); });
