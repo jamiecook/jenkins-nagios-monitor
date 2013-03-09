@@ -14,7 +14,7 @@ table.nagios-api {
   height: 100%;
 }
 
-div.state-good div.state-bad{ 
+.state-good { 
   overflow: hidden;
 }
 
