@@ -56,7 +56,7 @@ function generate_html_from_services(services) {
   var left_or_right = "left";
   var generated_html = "";
   for (var service in services) { 
-    generated_html += convert_service_entry_to_tr(host, service_str, service, left_or_right)
+    generated_html += convert_service_entry_to_tr(service.host, service.service, service, left_or_right)
     left_or_right = toggle_left_right(left_or_right);
   }
   return generated_html;
@@ -68,7 +68,9 @@ function display_nagios_status(data, t, j) {
   var service_entries = [];
   for (var host in data.content) {
       for (var service in data.content[host].services) {
-        var service_status = data.content[host].services[service].current_state
+        //var service_status = data.content[host].services[service].current_state
+        service['host'] = host;
+        service['service'] = service;
         // console.log("service: " + service + " on " + host + " has state: " + service_status)
         console.log(JSON.stringify(data.content[host].services[service]));
         service_entries.push(data.content[host].services[service])
