@@ -81,7 +81,7 @@ function display_nagios_status(data, t, j) {
   // console.log(JSON.stringify(services_by_state));
   console.log(Object.keys(services_by_state));
   
-  $('#nagios-api').html(generated_html);
+  $('#nagios-api').html(generate_html_from_services(service_entries));
 }
 
 function createSearchBox(url) { console.log("doing nothing with url: " + url); }
