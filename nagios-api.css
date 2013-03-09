@@ -46,11 +46,13 @@ span {
 .status-critical { 
   background-color: #FF5050;
   border-color:  #CC0000;
+  font-size: 250%;
 }
 
 .status-warning { 
   background-color: #FFFF99;
   border-color:  #B89300;
+  font-size: 250%;
 }
 
 .status-ok { 
@@ -61,4 +63,5 @@ span {
 .status-na { 
   background-color: #DDDDDD;
   border-color:  #333333;
+  font-size: 250%;
 }
