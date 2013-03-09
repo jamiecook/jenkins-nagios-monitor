@@ -81,23 +81,20 @@ function display_nagios_status(data, t, j) {
   $('#nagios-api').html(generate_html_from_services(service_entries));
   
   var html = "";
-  var services_by_state = _.groupBy(service_entries, function (e) { return parseInt(e['current_state'], 10); });
-  var bad_state = false;
-  // for (var key in Object.keys(services_by_state)) {
-  var bad_html = ""
-  for (var key = 5; key > 0; --key) {
-    if (services_by_state[key] !== undefined) 
-    bad_html += generate_html_from_services(services_by_state[key]);
-    bad_state = true;
-  }
-  if (bad_html !== "") {
-    html += "<div class='state-bad'>" + bad_html + "</div>";
+  var services_by_state = _.groupBy(service_entries, function (e) { return e['current_state'] === "0" ? "good" : "bad" });
+  var has_bad_state = (services_by_state["bad"] !== undefined);
+  var has_good_state = (services_by_state["bad"] !== undefined);
+  
+  if (services_by_state["bad"] !== undefined) {
+    html += "<div class='state-bad' style='height: " + (has_good_state ? "50%" : "100%") + "'>";
+    html += generate_html_from_services(services_by_state["bad"]);
+    html += "</div>"
   }
   
   // Good services
-  if (services_by_state[0] !== undefined) {
-    html += "<div class='state-good' style='height: " + (bad_state ? "50%" : "100%") + "'>";
-    html += generate_html_from_services(services_by_state[0]);
+  if (services_by_state["good"] !== undefined) {
+    html += "<div class='state-good' style='height: " + (has_bad_state ? "50%" : "100%") + "'>";
+    html += generate_html_from_services(services_by_state["good"]);
     html += "</div>"
   }
   $('#nagios-api').html(html);
