@@ -79,7 +79,7 @@ function display_nagios_status(data, t, j) {
     return k;
   });
   // console.log(JSON.stringify(services_by_state));
-  console.log(JSON.stringify(Object.keys(services_by_state)));
+  console.log(Object.keys(services_by_state));
   
   $('#nagios-api').html(generated_html);
 }
