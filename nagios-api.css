@@ -6,7 +6,6 @@ div#code-ci {
 div#nagios-api { 
   float: left;
   width: 50%;
-  height: 500px;
 }
 
 table.nagios-api {
