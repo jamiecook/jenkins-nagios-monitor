@@ -44,7 +44,7 @@ function convert_service_entry_to_tr(data, left_or_right, height) {
   
   var host_and_status = data.plugin_output.split(' - ')[0]
   var status          = "status-" + convert_integer_status_to_string(data.current_state)
-  var float_str       = height === "" ? left_or_right : ""
+  var float_str       = height === "" ? "left" : ""
   var class_str       = "class='host-entry " + status + " " + float_str + "' "
   return "<div " + class_str + height + ">" +
     data['host'] + ' ' + host_and_status + 
@@ -62,7 +62,7 @@ function generate_html_from_services(services, fill_height) {
   var height = fill_height ? "style='height: " + (94.0 / services.length) + "%; width: 98%' " : ""
   for (var i=0; i<services.length; ++i) {
     // console.log(JSON.stringify(services[i]));
-    generated_html += convert_service_entry_to_tr(services[i], left_or_right, height)
+    generated_html += convert_service_entry_to_div(services[i], left_or_right, height)
     left_or_right = toggle_left_right(left_or_right);
     console.log(left_or_right)
   }
