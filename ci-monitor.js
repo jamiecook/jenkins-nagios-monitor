@@ -50,10 +50,6 @@ function convert_service_entry_to_div(data, height) {
   "</div>"
 }
 
-function toggle_left_right(left_or_right) {
-  return left_or_right == "left" ? "right" : "left";
-}
-
 function generate_html_from_services(services, fill_height) {
   // console.log(JSON.stringify(services));
   var generated_html = "";
@@ -61,7 +57,6 @@ function generate_html_from_services(services, fill_height) {
   for (var i=0; i<services.length; ++i) {
     // console.log(JSON.stringify(services[i]));
     generated_html += convert_service_entry_to_div(services[i], height)
-    console.log(left_or_right)
   }
   return generated_html;
 }
