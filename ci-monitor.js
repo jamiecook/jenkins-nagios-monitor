@@ -36,7 +36,7 @@ function getBody(content)
     return content.slice(x + 1, y);
 }
 
-function convert_service_entry_to_tr(data, left_or_right, height) {
+function convert_service_entry_to_div(data, left_or_right, height) {
   // console.log(JSON.stringify(data));
   if (data.notifications_enabled == "0") {
     return ""
