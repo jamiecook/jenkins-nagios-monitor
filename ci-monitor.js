@@ -36,7 +36,7 @@ function getBody(content)
     return content.slice(x + 1, y);
 }
 
-function convert_service_entry_to_div(data, left_or_right, height) {
+function convert_service_entry_to_div(data, height) {
   // console.log(JSON.stringify(data));
   if (data.notifications_enabled == "0") {
     return ""
@@ -44,8 +44,7 @@ function convert_service_entry_to_div(data, left_or_right, height) {
   
   var host_and_status = data.plugin_output.split(' - ')[0]
   var status          = "status-" + convert_integer_status_to_string(data.current_state)
-  var float_str       = height === "" ? "left" : ""
-  var class_str       = "class='host-entry " + status + " " + float_str + "' "
+  var class_str       = "class='host-entry " + status + "' "
   return "<div " + class_str + height + ">" +
     data['host'] + ' ' + host_and_status + 
   "</div>"
@@ -57,13 +56,11 @@ function toggle_left_right(left_or_right) {
 
 function generate_html_from_services(services, fill_height) {
   // console.log(JSON.stringify(services));
-  var left_or_right = "left";
   var generated_html = "";
   var height = fill_height ? "style='height: " + (94.0 / services.length) + "%; width: 98%' " : ""
   for (var i=0; i<services.length; ++i) {
     // console.log(JSON.stringify(services[i]));
-    generated_html += convert_service_entry_to_div(services[i], left_or_right, height)
-    left_or_right = toggle_left_right(left_or_right);
+    generated_html += convert_service_entry_to_div(services[i], height)
     console.log(left_or_right)
   }
   return generated_html;
