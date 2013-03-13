@@ -42,7 +42,7 @@ function convert_service_entry_to_div(data, height) {
     return ""
   } 
   
-  var host_and_status = data.plugin_output.split(' - ')[0]
+  var host_and_status = data.plugin_output.split(' - ')[0].substring(0,50)
   var status          = "status-" + convert_integer_status_to_string(data.current_state)
   var class_str       = "class='host-entry " + status + "' "
   return "<div " + class_str + height + ">" +
