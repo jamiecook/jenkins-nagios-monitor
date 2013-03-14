@@ -50,9 +50,9 @@ function convert_service_entry_to_div(data, height) {
   "</div>"
 }
 
-function generate_html_from_services(services_lookup, good_bad, div_height) {
+function generate_html_from_services(services_lookup, good_bad, div_height_abs, div_height_rel) {
   var services       = services_lookup[good_bad];
-  var generated_html = "<div class='state-"+good_bad+"' style='height: " + div_height + "px'>";
+  var generated_html = "<div class='state-"+good_bad+"' style='height: " + div_height_rel + "%'>";
   var width          = good_bad == "good" ? "46%" : "98%"
   var element_height = div_height / services.length;
   console.log("element_height = " + element_height)
@@ -88,15 +88,16 @@ function display_nagios_status(data, t, j) {
   var has_good_state = (services_by_state["bad"] !== undefined);
   
   if (services_by_state["bad"] !== undefined) {
-    var div_height = $(window).height() / (has_good_state ? 2.0 : 1.0);
-    console.log("div_height = " + div_height)
+    var div_height_abs = $(window).height() / (has_good_state ? 2.0 : 1.0);
+    var div_height_rel = 100.0 / (has_good_state ? 2.0 : 1.0);
     html += generate_html_from_services(services_by_state, "bad", div_height);
   }
   
   // Good services
   if (services_by_state["good"] !== undefined) {
-    var div_height = $(window).height() / (has_bad_state ? 2.0 : 1.0);
-    html += generate_html_from_services(services_by_state, "good", div_height);
+    var div_height_abs = $(window).height() / (has_bad_state ? 2.0 : 1.0);
+    var div_height_rel = 100.0 / (has_good_state ? 2.0 : 1.0);
+    html += generate_html_from_services(services_by_state, "good", div_height_abs, div_height_rel);
   }
   $('#nagios-api').html(html);
   
