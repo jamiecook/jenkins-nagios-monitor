@@ -1,0 +1,1 @@
+{"ts":1363230155230,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"require 'webrick'\n\nroot = File.expand_path 'C:\\Users\\jamie.cook\\Documents\\CI'\nserver = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => root\n\ntrap 'INT' do server.shutdown end\n\nserver.start"]],"start1":0,"start2":0,"length1":0,"length2":196}]],"length":196}

@@ -53,9 +53,10 @@ function convert_service_entry_to_div(data, height) {
 function generate_html_from_services(services, fill_height) {
   // console.log(JSON.stringify(services));
   var generated_html = "";
-  var height = fill_height ? "style='height: " + (94.0 / services.length) + "%; width: 98%' " : ""
+  var div_height = $(window).height() / 2.0;
+  console.log(div_height);
+  var height = fill_height ? "style='height: " + (div_height / services.length) + "px; width: 98%' " : ""
   for (var i=0; i<services.length; ++i) {
-    // console.log(JSON.stringify(services[i]));
     generated_html += convert_service_entry_to_div(services[i], height)
   }
   return generated_html;
