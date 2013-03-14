@@ -130,3 +130,4 @@
 {"ts":1363300089265,"patch":[[{"diffs":[[0," }\n  \n  "],[-1,"#"],[1,"//"],[0," $('#nag"]],"start1":2566,"start2":2566,"length1":17,"length2":18}]],"length":3708,"saved":false}
 {"ts":1363300354053,"patch":[[{"diffs":[[0,"{\n  "],[-1,"console.log(JSON.stringify(services_lookup));\n  \n  var services = services_lookup[good_bad];\n  console.log(JSON.stringify(services))"],[1,"var services = services_lookup[good_bad]"],[0,";\n  "]],"start1":1437,"start2":1437,"length1":140,"length2":48}]],"length":3616,"saved":false}
 {"ts":1363300358299,"patch":[[{"diffs":[[0,"ervices "],[1,"      "],[0,"= servic"]],"start1":1446,"start2":1446,"length1":16,"length2":22}]],"length":3622,"saved":false}
+{"ts":1363300653967,"patch":[[{"diffs":[[0,"ight + \""],[1,"px"],[0,"'>\";\n  v"]],"start1":1570,"start2":1570,"length1":16,"length2":18}]],"length":3624,"saved":false}

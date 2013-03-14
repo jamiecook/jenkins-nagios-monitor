@@ -52,7 +52,7 @@ function convert_service_entry_to_div(data, height) {
 
 function generate_html_from_services(services_lookup, good_bad, div_height) {
   var services       = services_lookup[good_bad];
-  var generated_html = "<div class='state-"+good_bad+"' style='height: " + div_height + "'>";
+  var generated_html = "<div class='state-"+good_bad+"' style='height: " + div_height + "px'>";
   var width          = good_bad == "good" ? "46%" : "98%"
   var element_height = div_height / services.length;
   console.log("element_height = " + element_height)
