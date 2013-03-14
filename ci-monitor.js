@@ -50,14 +50,17 @@ function convert_service_entry_to_div(data, height) {
   "</div>"
 }
 
-function generate_html_from_services(services, fill_height) {
+function generate_html_from_services(services_lookup, good_bad, div_height) {
   // console.log(JSON.stringify(services));
-  var generated_html = "";
-  var div_height = $(window).height() / 2.0;
-  console.log(div_height);
-  var height = fill_height ? "style='height: " + (div_height / services.length) + "px; width: 98%' " : ""
+  var generated_html = "<div class='state-bad' style='height: " + div_height + "'>";
+  var width          = good_bad == "good" ? "46%" : "98%"
+  var element_height = div_height / services.length;
+  if (good_bad == "good") {
+    element_height *= 2;
+  }
+  var style = "style='height: " + element_height + "px; width: " + width + "' "
   for (var i=0; i<services.length; ++i) {
-    generated_html += convert_service_entry_to_div(services[i], height)
+    generated_html += convert_service_entry_to_div(services[i], style)
   }
   return generated_html;
 }
@@ -83,8 +86,9 @@ function display_nagios_status(data, t, j) {
   var has_good_state = (services_by_state["bad"] !== undefined);
   
   if (services_by_state["bad"] !== undefined) {
-    html += "<div class='state-bad' style='height: " + (has_good_state ? "50%" : "100%") + "'>";
-    html += generate_html_from_services(services_by_state["bad"], true);
+    
+    var div_height = $(window).height() / (has_good_state ? 2.0 : 1.0);
+    html += generate_html_from_services(services_by_state, "bad", div_height);
     html += "</div>"
   }
   
