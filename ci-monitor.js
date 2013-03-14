@@ -83,7 +83,7 @@ function display_nagios_status(data, t, j) {
       }
   }
   
-  $('#nagios-api').html(generate_html_from_services(service_entries));
+  // $('#nagios-api').html(generate_html_from_services(service_entries));
   
   var html = "";
   var services_by_state = _.groupBy(service_entries, function (e) { return e['current_state'] === "0" ? "good" : "bad" });
