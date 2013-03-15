@@ -74,6 +74,7 @@ function display_nagios_status(data, t, j) {
   for (var host in data.content) {
       for (var service_name in data.content[host].services) {
         var service = data.content[host].services[service_name]
+        if (service.notifications_enabled == "0") { continue; }
         service['host'] = host;
         service['service'] = service_name;
         service_entries.push(service);
