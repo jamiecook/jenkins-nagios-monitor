@@ -101,7 +101,7 @@ function display_nagios_status(data, t, j) {
   if (services_by_state["good"] !== undefined) {
     console.log("window height: " + $(window).height())
     console.log("nagios-api div height: " + $('#nagios-api').height())
-    var div_height_abs = $('#nagios-api').height() / (has_bad_state ? 2.0 : 1.0);
+    var div_height_abs = $(window).height() / (has_bad_state ? 2.0 : 1.0);
     console.log("div_height_absolute: " + div_height_abs)
     var div_height_rel = 100.0 / (has_good_state ? 2.0 : 1.0);
     console.log("div_height_relative: " + div_height_rel)
