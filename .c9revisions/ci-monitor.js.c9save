@@ -138,3 +138,4 @@
 {"ts":1363301028889,"patch":[[{"diffs":[[0,"? \"4"],[-1,"6"],[1,"8"],[0,"%\" :"]],"start1":1650,"start2":1650,"length1":9,"length2":9}]],"length":3759,"saved":false}
 {"ts":1363303216043,"patch":[[{"diffs":[[0,"od\" ? \"4"],[-1,"8"],[1,"7.5"],[0,"%\" : \"98"]],"start1":1646,"start2":1646,"length1":17,"length2":19}]],"length":3761,"saved":false}
 {"contributors":[],"silentsave":false,"ts":1363331481040,"patch":[[{"diffs":[[0,"v_height"],[1,"_abs, div_height_rel"],[0,");\n  }\n "]],"start1":3121,"start2":3121,"length1":16,"length2":36}]],"length":3781,"saved":false}
+{"ts":1363331605013,"patch":[[{"diffs":[[0,"e ? 2.0 : 1.0);\n"],[1,"    console.log(JSON.stringify(services_by_state[\"bad\"]))\n"],[0,"    html += gene"]],"start1":3037,"start2":3037,"length1":32,"length2":90}]],"length":3839,"saved":false}
