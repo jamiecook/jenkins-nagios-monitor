@@ -90,7 +90,7 @@ function display_nagios_status(data, t, j) {
   if (services_by_state["bad"] !== undefined) {
     var div_height_abs = $(window).height() / (has_good_state ? 2.0 : 1.0);
     var div_height_rel = 100.0 / (has_good_state ? 2.0 : 1.0);
-    html += generate_html_from_services(services_by_state, "bad", div_height);
+    html += generate_html_from_services(services_by_state, "bad", div_height_abs, div_height_rel);
   }
   
   // Good services
