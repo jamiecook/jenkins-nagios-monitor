@@ -1,6 +1,7 @@
 div#code-ci {
   float: left;
   width: 50%;
+  height: 100%;
 }
 
 div#nagios-api { 
