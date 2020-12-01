@@ -50,6 +50,7 @@ function generate_html_from_services(services_lookup, good_bad, div_height_abs, 
   }
   console.log("element_height = " + element_height)
   var style = "style='height: " + element_height + "px; width: " + width + "' "
+  console.log("num of elements = " + services.length)
   for (var i=0; i<services.length; ++i) {
     generated_html += convert_service_entry_to_div(services[i], style)
   }
@@ -63,7 +64,10 @@ function display_nagios_status(data, t, j) {
   for (var host in data.content) {
       for (var service_name in data.content[host].services) {
         var service = data.content[host].services[service_name]
-        if (service.notifications_enabled == "0") { continue; }
+        if (service.notifications_enabled == "0") { 
+           console.log("skipping " + host + ":" + service_name);
+           continue; 
+        }
         service['host'] = host;
         service['service'] = service_name;
         service_entries.push(service);

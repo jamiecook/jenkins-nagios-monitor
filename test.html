@@ -13,20 +13,16 @@
 <script type="text/javascript">
 
   window.onload = function() {
-    url = 'http://test.vlc/view/Radiator%20view%20-%20Code/'
-    $.get(url, function (data) {
-      $('#code-ci').html(getBody(data));
-      $('.dashboard').css("width", "50%");
-    });
-
-      
-    $.getJSON('http://hector.vlc:6315/state', display_nagios_status);
+    $.getJSON('http://nagios.vlc:6315/state', display_nagios_status);
   };
   
 </script>
 
 <body>
-  <div id="code-ci"> </div>
+  <div id="code-ci">
+    <iframe src="http://test.vlc/" frameborder="0" width="100%" height="100%">
+    </iframe>
+  </div>
   <div id="nagios-api"> </div>
 </body>
 
